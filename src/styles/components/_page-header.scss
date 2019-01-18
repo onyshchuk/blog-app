@@ -15,4 +15,17 @@
          font-weight: bold;
       }
    }
+
+   &__link {
+      text-decoration: none;
+      color: $grey;
+
+      &:visited {
+         color: $dark-blue;
+      }
+
+      &:hover {
+         border-bottom: 1px solid $dark-blue;
+      }
+   }
 }

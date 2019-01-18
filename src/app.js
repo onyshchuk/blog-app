@@ -6,14 +6,13 @@ import configureStore from './store/configureStore';
 import { login, logout } from './actions/auth';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-import 'react-dates/initialize';
-import 'react-dates/lib/css/_datepicker.css';
 import './firebase/firebase';
 import { firebase } from './firebase/firebase'; 
-import LoadingPage from './components/LoadingPage.js';
-
+import LoadingPage from './components/LoadingPage.js'
+import { startSetPosts } from './actions/posts';
 
 const store = configureStore();
+
 const jsx = (
    <Provider store={store}>
       <AppRouter />
@@ -32,14 +31,18 @@ ReactDOM.render(<LoadingPage />, document.querySelector('#app'));
 firebase.auth().onAuthStateChanged(user => {
    if(user) {
       store.dispatch(login(user.uid));
-      renderApp();
-      if(history.location.pathname === '/') {
-         history.push('/dashboard');
-      }
+      store.dispatch(startSetPosts()).then(() => {
+         renderApp();
+         if(history.location.pathname === '/') {
+            history.push('/dashboard');
+         };
+      });
    } else {
       store.dispatch(logout());
       ReactDOM.render(jsx, document.querySelector('#app'));
       renderApp();
-      history.push('/');
+      if(!history.location.pathname.includes('/read/')){
+         history.push('/');
+      }
    }
 });

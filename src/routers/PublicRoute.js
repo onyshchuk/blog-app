@@ -5,10 +5,11 @@ import { Route, Redirect } from 'react-router-dom';
 export const PublicRoute = ({
    isAuthenticated,
    component: Component,
+   path: path,
    ...rest
 }) => (
-   <Route {...rest} component={props => (
-      isAuthenticated ? (
+   <Route {...rest} path={path} component={props => (
+      (isAuthenticated && !path.includes('/read/')) ? (
          <Redirect to='/dashboard' />
       ) : (
          <Component {...props} />

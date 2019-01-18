@@ -11,6 +11,12 @@
    &__item{
       margin-bottom: $s-size;
 
+      & a {
+         height: 48px;
+         padding-top: 16px;
+         border-radius: 2px;
+      }
+
       @media (min-width: $desktop-breakpoint) {
          margin: 0 $s-size 0 0;
       }

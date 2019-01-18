@@ -1,0 +1,43 @@
+.Modal {
+   padding: 2rem;
+   max-width: 50vw;
+   background-color: $dark-blue;
+   color: white;
+   outline: none;
+   border-radius: 3px;
+   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.7);
+
+   .buttons {
+      display: flex;
+      justify-content: center;
+
+      & button:first-child {
+         margin-right: 1rem;
+      }
+   }
+}
+
+.Overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(255, 255, 255, 0.8);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.ReactModal__Overlay {
+   opacity: 0;
+   transition: opacity .2s ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+   opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+   opacity: 0;
+}
