@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setTextFilter, sortByDate, sortByTitle } from '../actions/filters';
 
-const PostsListFilters = props => {
+export const PostsListFilters = props => {
    const handleTextFilterChange = e => {
       props.handleTextFilterChange(e.target.value);
    };

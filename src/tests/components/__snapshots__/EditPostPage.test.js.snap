@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditPostPage properly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit Post
+      </h1>
+      <Link
+        className="page-header__link"
+        replace={false}
+        to="/read/2"
+      >
+        Post readable at .../read/
+        2
+      </Link>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <PostForm
+      handleRemoveClick={[Function]}
+      handleSaveClick={[Function]}
+      post={
+        Object {
+          "body": "second body",
+          "createdAt": 0,
+          "id": "2",
+          "title": "second post",
+        }
+      }
+    />
+  </div>
+</div>
+`;

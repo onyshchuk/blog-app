@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PostForm from './PostForm';
 import { startEditPost, startRemovePost } from './../actions/posts';
 
-const EditPostPage = props => {
+export const EditPostPage = props => {
    if(!props.post) return <Redirect to="/"/>
 
    const handleSaveClick = updates => {
@@ -20,7 +20,12 @@ const EditPostPage = props => {
          <div className="page-header">
             <div className="content-container">
                <h1 className="page-header__title">Edit Post</h1>
-               <Link className="page-header__link" to={`/read/${props.post.id}`}>Post readable at .../read/{props.post.id}</Link>
+               <Link
+                  className="page-header__link" 
+                  to={`/read/${props.post.id}`}
+               >
+                  Post readable at .../read/{props.post.id}
+               </Link>
             </div>
          </div>
          <div className="content-container">
@@ -28,7 +33,6 @@ const EditPostPage = props => {
                post={props.post}
                handleSaveClick={handleSaveClick} 
                handleRemoveClick={handleRemoveClick}
-               readableLink={props.history.location.pathname}
             />
          </div>
       </div>

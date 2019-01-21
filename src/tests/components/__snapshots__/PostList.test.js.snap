@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PostsList properly with empty list 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-item list-item--message"
+    >
+      <span>
+        No items
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render PostsList properly with filled list 1`] = `
+<div
+  className="content-container"
+>
+  <div
+    className="list-body"
+  >
+    <PostListItem
+      body="first body"
+      createdAt={-2678400000}
+      id="1"
+      key="1"
+      title="first post"
+    />
+    <PostListItem
+      body="second body"
+      createdAt={0}
+      id="2"
+      key="2"
+      title="second post"
+    />
+    <PostListItem
+      body="third body"
+      createdAt={2678400000}
+      id="3"
+      key="3"
+      title="third post"
+    />
+  </div>
+</div>
+`;

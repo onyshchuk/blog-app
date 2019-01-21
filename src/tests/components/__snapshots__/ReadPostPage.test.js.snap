@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shoud render ReadPostPage properly 1`] = `
+<div>
+  <h1>
+    second post
+  </h1>
+  <p>
+    second body
+  </p>
+</div>
+`;

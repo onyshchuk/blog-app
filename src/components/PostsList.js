@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PostListitem from './PostListItem';
 import selectPosts from './../selectors/posts';
 
-const PostsList = props => {
+export const PostsList = props => {
    const posts = props.posts ? props.posts : [];
    const selectedPosts = selectPosts(posts, props.filters);
    return (
@@ -15,7 +15,7 @@ const PostsList = props => {
                      <span>No items</span>
                   </div>
                ) : (
-                  selectedPosts.map(post => <PostListitem key={post.id} id={post.id} item={post} />)
+                  selectedPosts.map(post => <PostListitem key={post.id} {...post} />)
                )
             }
          </div>

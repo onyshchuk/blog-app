@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 
-const PostListItem = ({ id, item: { title, body, createdAt } }) => (
+export const PostListItem = ({ id, title, body, createdAt }) => (
    <Link className="list-item" to={`/edit/${id}`}>
       <div>
          <h3 className="list-item__title">{title}</h3> 

@@ -1,4 +1,4 @@
-import authReducer from './../../reducers/auth';
+import authReducer from './../../reducers/authReducer';
 
 test('should setup default state', () => {
    const state = authReducer(undefined, '@@INIT');

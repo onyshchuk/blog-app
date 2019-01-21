@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import RemoveApprovalModal from './RemoveApprovalModal';
 
-class PostForm extends React.Component {
+export default class PostForm extends React.Component {
    state = {
       id: this.props.post ? this.props.post.id : '',
       title: this.props.post ? this.props.post.title : '',
@@ -72,5 +72,3 @@ class PostForm extends React.Component {
       );
    };
 };
-
-export default PostForm;

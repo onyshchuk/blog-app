@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should handle form submition error properly 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <p
+    className="form__error"
+  >
+    Pls fill the fields
+  </p>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Post title"
+    type="text"
+    value=""
+  />
+  <textarea
+    className="textarea"
+    onChange={[Function]}
+    placeholder="Post body"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+      type="submit"
+    >
+      Save Post
+    </button>
+  </div>
+  <RemoveApprovalModal
+    closeModal={[Function]}
+    isOpen={false}
+    selectedPostTitle=""
+  />
+</form>
+`;
+
+exports[`should render PostForm for EditPage with post data properly with remove button 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Post title"
+    type="text"
+    value="third post"
+  />
+  <textarea
+    className="textarea"
+    onChange={[Function]}
+    placeholder="Post body"
+    value="third body"
+  />
+  <div>
+    <button
+      className="button"
+      type="submit"
+    >
+      Save Post
+    </button>
+    <a
+      className="button"
+      onClick={[Function]}
+    >
+      Remove Post
+    </a>
+  </div>
+  <RemoveApprovalModal
+    closeModal={[Function]}
+    handleRemoveClick={[Function]}
+    isOpen={false}
+    selectedPostTitle="third post"
+  />
+</form>
+`;
+
+exports[`should render PostFrom for AddPage with default values properly 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Post title"
+    type="text"
+    value=""
+  />
+  <textarea
+    className="textarea"
+    onChange={[Function]}
+    placeholder="Post body"
+    value=""
+  />
+  <div>
+    <button
+      className="button"
+      type="submit"
+    >
+      Save Post
+    </button>
+  </div>
+  <RemoveApprovalModal
+    closeModal={[Function]}
+    isOpen={false}
+    selectedPostTitle=""
+  />
+</form>
+`;

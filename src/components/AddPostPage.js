@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import PostForm from './PostForm';
 import { startAddPost } from '../actions/posts';
 
-const AddPostPage = props => {
+export const AddPostPage = props => {
    const handleSaveClick = post => {
       props.handleSaveClick(post);
       props.history.push('/');
-   }
+   };
    return (
       <div>
          <div className="page-header">

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PostsListFilters properly 1`] = `
+<div>
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Published posts
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <div
+      className="input-group"
+    >
+      <div
+        className="input-group__item"
+      >
+        <input
+          className="text-input"
+          onChange={[Function]}
+          placeholder="Search posts"
+          type="text"
+        />
+      </div>
+      <div
+        className="input-group__item"
+      >
+        <select
+          className="select"
+          onChange={[Function]}
+        >
+          <option
+            value="title"
+          >
+            title
+          </option>
+          <option
+            value="date"
+          >
+            date
+          </option>
+        </select>
+      </div>
+      <div
+        className="input-group__item"
+      >
+        <Link
+          className="button"
+          replace={false}
+          to="/create"
+        >
+          Add post
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+`;
